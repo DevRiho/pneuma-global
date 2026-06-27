@@ -1,5 +1,5 @@
 import { lazy, Suspense, useEffect } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useLocation,  HashRouter } from 'react-router-dom';
 import Layout from './components/Layout';
 import { LoadingProvider, usePageLoader } from './context/LoadingContext';
 
@@ -48,7 +48,7 @@ function AppRoutes() {
 
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <ScrollToTop />
       <LoadingProvider>
         <GlobalPreloader />
@@ -56,7 +56,7 @@ function App() {
           <AppRoutes />
         </Suspense>
       </LoadingProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
