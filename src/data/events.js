@@ -1,7 +1,7 @@
-export const events = [
+export const getEvents = (base) => [
   {
     id: 'pneuma-summit-2027',
-    image: '/assets/main_worship.jpg',
+    image: `${base}assets/main_worship.jpg`,
     alt: 'Pneuma Summit 2027',
     day: '05',
     month: 'Mar',
@@ -13,7 +13,7 @@ export const events = [
   },
   {
     id: 'pneuma-global-gathering',
-    image: '/assets/volunteer_section.jpg',
+    image: `${base}assets/volunteer_section.jpg`,
     alt: 'Pneuma Global Worship Event',
     day: '07',
     month: 'Sep',
@@ -25,7 +25,7 @@ export const events = [
   },
   {
     id: 'kingdom-come-mandate',
-    image: '/assets/project_banner.jpg',
+    image: `${base}assets/project_banner.jpg`,
     alt: 'Kingdom Come conference',
     day: '27',
     month: 'Feb',
@@ -37,7 +37,7 @@ export const events = [
   },
   {
     id: 'touch-youth-lives',
-    image: '/assets/project_banner.jpg',
+    image: `${base}assets/project_banner.jpg`,
     alt: 'Touch the lives of youth',
     day: '14',
     month: 'Aug',
@@ -49,7 +49,7 @@ export const events = [
   },
   {
     id: 'be-hungry-no-more',
-    image: '/assets/volunteer_section.jpg',
+    image: `${base}assets/volunteer_section.jpg`,
     alt: 'Be hungry no more',
     day: '16',
     month: 'Aug',
@@ -61,7 +61,7 @@ export const events = [
   },
   {
     id: 'charities-conference',
-    image: '/assets/main_worship.jpg',
+    image: `${base}assets/main_worship.jpg`,
     alt: 'Charities conference',
     day: '08',
     month: 'Aug',

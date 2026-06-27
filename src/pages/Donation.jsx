@@ -1,9 +1,9 @@
 import InnerHeader from '../components/InnerHeader';
 
-const campaigns = [
+const getCampaigns = (base) => [
   {
     id: 1,
-    image: '/assets/main_worship.jpg',
+    image: `${base}assets/main_worship.jpg`,
     alt: 'Campaign worship',
     tag: 'Ministry',
     title: 'Fundraising results have reached',
@@ -14,7 +14,7 @@ const campaigns = [
   },
   {
     id: 2,
-    image: '/assets/volunteer_section.jpg',
+    image: `${base}assets/volunteer_section.jpg`,
     alt: 'Campaign clean water',
     tag: 'Water',
     title: 'Providing access to safe water, sanitation',
@@ -25,7 +25,7 @@ const campaigns = [
   },
   {
     id: 3,
-    image: '/assets/project_banner.jpg',
+    image: `${base}assets/project_banner.jpg`,
     alt: 'Campaign healing help',
     tag: 'Health',
     title: 'Your Little Help Can Heal Their Helps',
@@ -36,7 +36,7 @@ const campaigns = [
   },
   {
     id: 4,
-    image: '/assets/volunteer_section.jpg',
+    image: `${base}assets/volunteer_section.jpg`,
     alt: 'Campaign children rights',
     tag: 'Advocacy',
     title: 'Promoting The Rights of Children',
@@ -47,7 +47,7 @@ const campaigns = [
   },
   {
     id: 5,
-    image: '/assets/project_banner.jpg',
+    image: `${base}assets/project_banner.jpg`,
     alt: 'Campaign Education',
     tag: 'Education',
     title: 'Give African Child A Good Education',
@@ -58,7 +58,7 @@ const campaigns = [
   },
   {
     id: 6,
-    image: '/assets/main_worship.jpg',
+    image: `${base}assets/main_worship.jpg`,
     alt: 'Campaign Somalians happy',
     tag: 'Relief',
     title: 'Contribute Make For The Somalians happy',
@@ -76,41 +76,45 @@ const mockDonate = (campaignName) => {
   }
 };
 
-const Donation = () => (
-  <>
-    <InnerHeader title="Campaigns" breadcrumb="Donation" />
+const Donation = () => {
+  const campaigns = getCampaigns(import.meta.env.BASE_URL);
 
-    <section className="section-padding" style={{ backgroundColor: 'var(--white)' }}>
-      <div className="container">
-        <div className="campaign-grid">
-          {campaigns.map((campaign) => (
-            <div key={campaign.id} className="campaign-card">
-              <div className="campaign-img">
-                <img src={campaign.image} alt={campaign.alt} loading="lazy" decoding="async" />
-                <span className="campaign-tag">{campaign.tag}</span>
-              </div>
-              <div className="campaign-info">
-                <h3 className="campaign-title"><a href="#">{campaign.title}</a></h3>
-                <p className="campaign-desc">{campaign.desc}</p>
-                <div className="campaign-progress">
-                  <div className="progress-bar-bg">
-                    <div className="progress-bar-fill" style={{ width: campaign.width }} />
-                  </div>
-                  <div className="campaign-stats">
-                    <div className="campaign-stat-item">Goal: <span>{campaign.goal}</span></div>
-                    <div className="campaign-stat-item" style={{ textAlign: 'right' }}>Raised: <span>{campaign.raised}</span></div>
-                  </div>
+  return (
+    <>
+      <InnerHeader title="Campaigns" breadcrumb="Donation" />
+
+      <section className="section-padding" style={{ backgroundColor: 'var(--white)' }}>
+        <div className="container">
+          <div className="campaign-grid">
+            {campaigns.map((campaign) => (
+              <div key={campaign.id} className="campaign-card">
+                <div className="campaign-img">
+                  <img src={campaign.image} alt={campaign.alt} loading="lazy" decoding="async" />
+                  <span className="campaign-tag">{campaign.tag}</span>
                 </div>
-                <button type="button" className="btn btn-primary campaign-btn" onClick={() => mockDonate(campaign.title)}>
-                  Donate Now
-                </button>
+                <div className="campaign-info">
+                  <h3 className="campaign-title"><a href="#">{campaign.title}</a></h3>
+                  <p className="campaign-desc">{campaign.desc}</p>
+                  <div className="campaign-progress">
+                    <div className="progress-bar-bg">
+                      <div className="progress-bar-fill" style={{ width: campaign.width }} />
+                    </div>
+                    <div className="campaign-stats">
+                      <div className="campaign-stat-item">Goal: <span>{campaign.goal}</span></div>
+                      <div className="campaign-stat-item" style={{ textAlign: 'right' }}>Raised: <span>{campaign.raised}</span></div>
+                    </div>
+                  </div>
+                  <button type="button" className="btn btn-primary campaign-btn" onClick={() => mockDonate(campaign.title)}>
+                    Donate Now
+                  </button>
+                </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
-  </>
-);
+      </section>
+    </>
+  );
+};
 
 export default Donation;

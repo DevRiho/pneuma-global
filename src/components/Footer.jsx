@@ -15,7 +15,7 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid footer-grid-centered">
           <div className="footer-col footer-col-brand">
-            <img src="/assets/logo-white-c-4.png" alt="Pneuma Global Logo" className="footer-logo" loading="lazy" decoding="async" />
+            <img src={`${import.meta.env.BASE_URL}assets/logo-white-c-4.png`} alt="Pneuma Global Logo" className="footer-logo" loading="lazy" decoding="async" />
             <p>We work with the Kingdom come mandate to raise believers, followers, and dedicated disciples of Christ across the globe.</p>
             <div className="footer-contact-list">
               <div className="footer-contact-item">

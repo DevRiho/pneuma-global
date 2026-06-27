@@ -1,10 +1,10 @@
 const InnerHeader = ({ title }) => (
   <section className="tp-breadcrumb__area p-relative fix">
     <div className="tp-breadcrumb__shape-1 z-index-5">
-      <img src="/assets/breadcrumb-shape-1.png" alt="" />
+      <img src={`${import.meta.env.BASE_URL}assets/breadcrumb-shape-1.png`} alt="" />
     </div>
     <div className="tp-breadcrumb__shape-2 z-index-5">
-      <img src="/assets/breadcrumb-shape-2.png" alt="" />
+      <img src={`${import.meta.env.BASE_URL}assets/breadcrumb-shape-2.png`} alt="" />
     </div>
     <div className="container">
       <div className="row">

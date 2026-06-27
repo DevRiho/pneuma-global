@@ -58,7 +58,7 @@ const Header = () => {
             onFocus={() => preloadRoute('/')}
             onMouseEnter={() => preloadRoute('/')}
           >
-            <img src="/assets/logo-white-c-4.png" alt="Pneuma Global Logo" decoding="async" fetchPriority="high" />
+            <img src={`${import.meta.env.BASE_URL}assets/logo-white-c-4.png`} alt="Pneuma Global Logo" decoding="async" fetchPriority="high" />
           </Link>
         </div>
 

@@ -1,9 +1,11 @@
 import InnerHeader from '../components/InnerHeader';
 import EventCard from '../components/EventCard';
-import { events } from '../data/events';
+import { getEvents } from '../data/events';
 
-const Events = () => (
-  <>
+const Events = () => {
+  const events = getEvents(import.meta.env.BASE_URL);
+  return (
+    <>
     <InnerHeader title="Upcoming Events" breadcrumb="Events" />
     <section className="section-padding" style={{ backgroundColor: 'var(--white)' }}>
       <div className="container">
@@ -14,7 +16,8 @@ const Events = () => (
         </div>
       </div>
     </section>
-  </>
-);
+    </>
+  );
+};
 
 export default Events;

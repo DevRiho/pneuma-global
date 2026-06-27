@@ -8,7 +8,7 @@ const ProjectTabs = () => {
       <div className="container">
         <div className="project-grid">
           <div className="project-left">
-            <img src="/assets/project_banner.jpg" alt="Pneuma Global Project" loading="lazy" decoding="async" />
+            <img src={`${import.meta.env.BASE_URL}assets/project_banner.jpg`} alt="Pneuma Global Project" loading="lazy" decoding="async" />
           </div>
           <div className="project-right">
             <span className="section-subtitle">Our Mandate</span>

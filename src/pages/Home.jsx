@@ -4,10 +4,12 @@ import VideoModal from "../components/VideoModal";
 import EventCard from "../components/EventCard";
 import ProjectTabs from "../components/ProjectTabs";
 import CtaSection from "../components/CtaSection";
-import { events } from "../data/events";
+import { getEvents } from "../data/events";
 
 const Home = () => {
   const [videoId, setVideoId] = useState(null);
+
+  const events = getEvents(import.meta.env.BASE_URL);
 
   return (
     <>
@@ -56,7 +58,7 @@ const Home = () => {
             <div className="about-left">
               <div className="about-image-wrapper">
                 <img
-                  src="/assets/volunteer_section.jpg"
+                  src={`${import.meta.env.BASE_URL}assets/volunteer_section.jpg`}
                   alt="Pneuma Global Volunteer Activity"
                   loading="lazy"
                   decoding="async"
@@ -88,7 +90,7 @@ const Home = () => {
               <div className="pastor-profile">
                 <img
                   className="pastor-img"
-                  src="/assets/pastor_krimi.jpg"
+                  src={`${import.meta.env.BASE_URL}assets/pastor_krimi.jpg`}
                   alt="Pastor Krimi Johnson"
                   loading="lazy"
                   decoding="async"
@@ -131,14 +133,14 @@ const Home = () => {
             {/* Item 1 */}
             <div className="col-xl mb-10">
               <div className="tp-gallery__thumb p-relative">
-                <img src="/assets/as-1.png" alt="Pray Radically Expecting Something Supernatural" loading="lazy" decoding="async" />
+                <img src={`${import.meta.env.BASE_URL}assets/as-1.png`} alt="Pray Radically Expecting Something Supernatural" loading="lazy" decoding="async" />
                 <div className="tp-gallery__thumb-overly">
                   <div className="tp-gallery__overly-text">
                     <span>PRESS</span>
                     <h4 className="tp-gallery__title-sm">Pray Radically Expecting Something Supernatural</h4>
                   </div>
                   <div className="tp-gallery__shape">
-                    <img src="/assets/gal-shape-1.png" alt="" />
+                    <img src={`${import.meta.env.BASE_URL}assets/gal-shape-1.png`} alt="" />
                   </div>
                 </div>
               </div>
@@ -147,10 +149,10 @@ const Home = () => {
             {/* Item 2 */}
             <div className="col-xl mb-10">
               <div className="tp-gallery__thumb p-relative">
-                <img src="/assets/as-2.png" alt="Gallery image" loading="lazy" decoding="async" />
+                <img src={`${import.meta.env.BASE_URL}assets/as-2.png`} alt="Gallery image" loading="lazy" decoding="async" />
                 <div className="tp-gallery__thumb-overly">
                   <div className="tp-gallery__shape">
-                    <img src="/assets/gal-shape-1.png" alt="" />
+                    <img src={`${import.meta.env.BASE_URL}assets/gal-shape-1.png`} alt="" />
                   </div>
                 </div>
               </div>
@@ -159,10 +161,10 @@ const Home = () => {
             {/* Item 3 */}
             <div className="col-xl mb-10">
               <div className="tp-gallery__thumb p-relative">
-                <img src="/assets/as-3.png" alt="Gallery image" loading="lazy" decoding="async" />
+                <img src={`${import.meta.env.BASE_URL}assets/as-3.png`} alt="Gallery image" loading="lazy" decoding="async" />
                 <div className="tp-gallery__thumb-overly">
                   <div className="tp-gallery__shape">
-                    <img src="/assets/gal-shape-1.png" alt="" />
+                    <img src={`${import.meta.env.BASE_URL}assets/gal-shape-1.png`} alt="" />
                   </div>
                 </div>
               </div>
@@ -171,10 +173,10 @@ const Home = () => {
             {/* Item 4 */}
             <div className="col-xl mb-10">
               <div className="tp-gallery__thumb p-relative">
-                <img src="/assets/as-4.png" alt="Gallery image" loading="lazy" decoding="async" />
+                <img src={`${import.meta.env.BASE_URL}assets/as-4.png`} alt="Gallery image" loading="lazy" decoding="async" />
                 <div className="tp-gallery__thumb-overly">
                   <div className="tp-gallery__shape">
-                    <img src="/assets/gal-shape-1.png" alt="" />
+                    <img src={`${import.meta.env.BASE_URL}assets/gal-shape-1.png`} alt="" />
                   </div>
                 </div>
               </div>
@@ -183,14 +185,14 @@ const Home = () => {
             {/* Item 5 */}
             <div className="col-xl mb-10">
               <div className="tp-gallery__thumb p-relative">
-                <img src="/assets/gal-1-5.png" alt="Our Education and Scholarship Scheme" loading="lazy" decoding="async" />
+                <img src={`${import.meta.env.BASE_URL}assets/gal-1-5.png`} alt="Our Education and Scholarship Scheme" loading="lazy" decoding="async" />
                 <div className="tp-gallery__thumb-overly">
                   <div className="tp-gallery__overly-text">
                     <span>"The Future" Project</span>
                     <h4 className="tp-gallery__title-sm">Our Education and Scholarship Scheme</h4>
                   </div>
                   <div className="tp-gallery__shape">
-                    <img src="/assets/gal-shape-1.png" alt="" />
+                    <img src={`${import.meta.env.BASE_URL}assets/gal-shape-1.png`} alt="" />
                   </div>
                 </div>
               </div>

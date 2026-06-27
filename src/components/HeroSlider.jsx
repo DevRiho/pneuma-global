@@ -1,18 +1,20 @@
 import { useState, useEffect, useRef } from 'react';
 
+const BASE = import.meta.env.BASE_URL;
+
 const slides = [
   {
-    bg: '/assets/wide-1-1.png',
+    bg: `${BASE}assets/wide-1-1.png`,
     subtitle: 'Encounter God, Experience His Presence',
     title: 'Welcome <br> To Church <br>',
   },
   {
-    bg: '/assets/wide-2-1.png',
+    bg: `${BASE}assets/wide-2-1.png`,
     subtitle: 'Worship with us',
     title: 'Worship <br> in Spirit <br> and in Truth',
   },
   {
-    bg: '/assets/wide-3.png',
+    bg: `${BASE}assets/wide-3.png`,
     subtitle: 'A home where The Spirit gives Life',
     title: 'Encounter God <br> in Woship <br>',
   },
@@ -52,17 +54,17 @@ const HeroSlider = () => {
             >
               {/* Slider Shapes */}
               <div className="tp-slider__shape z-index">
-                <img src="/assets/slider-shape-1.png" alt="" />
+                <img src={`${BASE}assets/slider-shape-1.png`} alt="" />
               </div>
               <div
                 className="tp-slider__shape-2"
-                style={{ backgroundImage: 'url(/assets/slider-shape-2.png)', width: '100%', height: '100%', backgroundRepeat: 'no-repeat' }}
+                style={{ backgroundImage: `url(${BASE}assets/slider-shape-2.png)`, width: '100%', height: '100%', backgroundRepeat: 'no-repeat' }}
               ></div>
               <div className="tp-slider__shape-3">
-                <img src="/assets/slider-shape-3.png" alt="" />
+                <img src={`${BASE}assets/slider-shape-3.png`} alt="" />
               </div>
               <div className="tp-slider__shape-4">
-                <img src="/assets/slider-shape-4.png" alt="" />
+                <img src={`${BASE}assets/slider-shape-4.png`} alt="" />
               </div>
 
               {/* Slider Content */}
