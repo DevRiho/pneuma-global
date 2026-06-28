@@ -85,7 +85,7 @@ const About = () => {
             <div className="tp-team-2__wrapper">
               <div className="tp-team-2__item text-center">
                 <div className="tp-team-2__thumb">
-                  <img src={`${import.meta.env.BASE_URL}assets/pastor_krimi.jpg`} alt="Pastor Krimi Johnson" loading="lazy" decoding="async" />
+                  <img src={`${import.meta.env.BASE_URL}assets/pastor_mr.jpg`} alt="Pastor Krimi Johnson" loading="lazy" decoding="async" />
                 </div>
                 <div className="tp-team-2__content">
                   <div className="tp-team-2__author-info">
@@ -107,7 +107,7 @@ const About = () => {
             <div className="tp-team-2__wrapper">
               <div className="tp-team-2__item text-center">
                 <div className="tp-team-2__thumb">
-                  <img src={`${import.meta.env.BASE_URL}assets/team-1-2.jpg`} alt="Mrs. Krimi Johnson" loading="lazy" decoding="async" />
+                  <img src={`${import.meta.env.BASE_URL}assets/pastor_mrs.jpg`} alt="Mrs. Krimi Johnson" loading="lazy" decoding="async" />
                 </div>
                 <div className="tp-team-2__content">
                   <div className="tp-team-2__author-info">

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 const CtaSection = ({ showButton = false }) => (
-  /* Donation CTA Section */
+  /* Call to Action Section */
   <section className="tp-cta-2__area">
     <div 
       className="tp-cta-2__bg p-relative fix" 
@@ -22,8 +22,8 @@ const CtaSection = ({ showButton = false }) => (
                 No One Has Ever Become <br />Poor From Giving so Give Towards <br /> the Pneuma mandate
               </h2>
               {showButton && (
-                <Link to="/donation" className="tp-btn theme-2-bg">
-                  Start Donating Now
+                <Link to="/contact" className="tp-btn theme-2-bg">
+                  Contact Us Now
                 </Link>
               )}
             </div>

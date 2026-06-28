@@ -90,7 +90,7 @@ const Home = () => {
               <div className="pastor-profile">
                 <img
                   className="pastor-img"
-                  src={`${import.meta.env.BASE_URL}assets/pastor_krimi.jpg`}
+                  src={`${import.meta.env.BASE_URL}assets/pastor_mr.jpg`}
                   alt="Pastor Krimi Johnson"
                   loading="lazy"
                   decoding="async"

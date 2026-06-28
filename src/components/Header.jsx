@@ -5,7 +5,6 @@ import { usePageLoader } from '../context/LoadingContext';
 const navLinks = [
   { to: '/', label: 'Home' },
   { to: '/about', label: 'About Us' },
-  { to: '/donation', label: 'Donation' },
   { to: '/events', label: 'Events' },
   { to: '/contact', label: 'Contact' },
 ];
@@ -13,7 +12,6 @@ const navLinks = [
 const routePreloaders = {
   '/': () => import('../pages/Home'),
   '/about': () => import('../pages/About'),
-  '/donation': () => import('../pages/Donation'),
   '/events': () => import('../pages/Events'),
   '/contact': () => import('../pages/Contact'),
 };

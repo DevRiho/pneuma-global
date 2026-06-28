@@ -6,7 +6,6 @@ import { LoadingProvider, usePageLoader } from './context/LoadingContext';
 const Home = lazy(() => import('./pages/Home'));
 const About = lazy(() => import('./pages/About'));
 const Events = lazy(() => import('./pages/Events'));
-const Donation = lazy(() => import('./pages/Donation'));
 const Contact = lazy(() => import('./pages/Contact'));
 
 const ScrollToTop = () => {
@@ -39,7 +38,6 @@ function AppRoutes() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
         <Route path="events" element={<Events />} />
-        <Route path="donation" element={<Donation />} />
         <Route path="contact" element={<Contact />} />
       </Route>
     </Routes>

@@ -41,6 +41,8 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -48,6 +50,8 @@ body {
   color: var(--text-color);
   background-color: var(--white);
   line-height: 1.7;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 a {
@@ -687,26 +691,51 @@ button, input, textarea, select {
 }
 
 @media (max-width: 1024px) {
+  .header-top-bar {
+    display: none !important;
+  }
+
   .header-shell {
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+    height: 72px;
+    width: 100%;
   }
 
   .header-logo-panel {
-    padding: 12px 24px;
-    justify-content: flex-start;
+    padding: 10px 20px;
+    background-color: #07847f;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex-shrink: 0;
   }
 
   .header-logo-link img {
-    height: 56px;
+    height: 42px !important;
+    width: auto !important;
   }
 
-  .header-top-bar {
-    padding: 10px 20px;
+  .header-content {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
   }
 
   .header-main-row {
-    padding: 12px 20px;
-    flex-wrap: wrap;
+    flex: 1;
+    padding: 0 20px;
+    height: 100%;
+    min-height: auto;
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: static !important;
   }
 
   .header-main-row .nav-menu {
@@ -721,7 +750,7 @@ button, input, textarea, select {
     gap: 15px;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05);
     border-top: 1px solid var(--border-color);
-    z-index: 10;
+    z-index: 9999 !important;
   }
 
   .header-main-row .nav-menu.active {
@@ -730,31 +759,48 @@ button, input, textarea, select {
 
   .menu-toggle {
     display: block;
+    z-index: 100;
   }
 
-  .header-main-row .header-call {
-    display: none;
+  .header-main-row .header-call,
+  .header-main-row .header-actions {
+    display: none !important;
   }
 
-  .header-top-right {
-    gap: 12px;
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+  }
+
+  .header-right .btn-primary {
+    padding: 8px 16px !important;
+    font-size: 0.85rem !important;
+    height: auto !important;
+    line-height: 1.5 !important;
+  }
+
+  /* Sticky Header overrides for mobile viewports */
+  .site-header.header-sticky .header-logo-panel {
+    padding: 10px 20px !important;
+    height: 100% !important;
+  }
+
+  .site-header.header-sticky .header-logo-link img {
+    height: 42px !important;
+    width: auto !important;
+  }
+
+  .site-header.header-sticky .header-main-row {
+    min-height: auto !important;
+    height: 100% !important;
   }
 }
 
-@media (max-width: 768px) {
-  .header-top-bar {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .header-top-right {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-  }
-
-  .header-main-row .header-actions {
-    display: none;
+@media (max-width: 576px) {
+  .header-right .btn-primary {
+    display: none !important;
   }
 }
 
@@ -2969,4 +3015,49 @@ textarea.form-field {
   width: 18px;
   height: 18px;
   fill: currentColor;
+}
+
+/* Responsive Custom Overrides */
+@media (max-width: 991px) {
+  /* Hide hero slider shapes to clean up layout and remove green shapes overlay */
+  .tp-slider__shape,
+  .tp-slider__shape-2,
+  .tp-slider__shape-3,
+  .tp-slider__shape-4 {
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+@media (max-width: 767px) {
+  /* Change hero background green overlay to neutral dark tint */
+  .tp-slider__bg::after {
+    background-color: rgba(0, 0, 0, 0.45) !important;
+  }
+
+  /* Force pastors grid to single column on mobile to prevent overflow */
+  .pastors-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  
+  .tp-team-2__wrapper {
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Center and properly format cookie banner on mobile */
+  .cookie-banner {
+    left: 5% !important;
+    right: 5% !important;
+    width: 90% !important;
+    max-width: none !important;
+    bottom: 10px !important;
+  }
+  
+  .cookie-reconsent-btn {
+    left: 10px !important;
+    bottom: 10px !important;
+  }
 }
